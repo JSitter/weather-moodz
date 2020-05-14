@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 
+import Poll from './components/Poll';
+
 function App() {
   const [ geoAvail, setGeoAvail ] = useState(false);
   const [ latitude, setLatitude ] = useState(null);
   const [ longitude, setLongitude ] = useState(null);
+  const [ city, setCity ] = useState(null);
+  const [ state, setState ] = useState(null);
 
   useEffect(()=>{
     if( !geoAvail && "geolocation" in navigator) {
@@ -16,11 +20,15 @@ function App() {
     }
   }, [geoAvail]);
 
+  let setEmotion = (event) => {
+    console.log(event);
+  }
   return (
     <div className="App">
       <header className="App-header">
-          <h2>Latitude: </h2> <p>{latitude}</p>
-          <h2>Longitude: </h2> <p>{longitude}</p>
+          <h1>Weather Moodz</h1>
+          {}
+          <Poll setUserEmotion={setEmotion} />
       </header>
     </div>
   );
