@@ -1,0 +1,40 @@
+.city-chooser-form {
+    background-color: rgba(0,0,0,.8);
+    border-radius: 8px;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+}
+
+.close-button {
+    cursor: pointer;
+    margin: 5px 18px;
+    position: absolute;
+}
+
+.form-fields {
+    height: 90%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+label {
+    margin: 10px;
+    font-size: .8em;
+}
+
+input {
+    margin: 5px 10px 20px 10px;
+    font-size: 1em;
+}
+
+h3 {
+    font-size: 1em;
+    margin: 30px 30px;
+}
+
+.search-icon {
+    cursor: pointer;
+}

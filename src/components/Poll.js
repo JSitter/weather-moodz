@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import './Poll.css';
 
-export default function Poll({setUserEmotion}) {
+export default function Poll({results}) {
     const [userEmotion, changeUserEmotion ] = useState(null);
 
     let emotionChange = (event) => {
@@ -9,22 +10,27 @@ export default function Poll({setUserEmotion}) {
 
     let emotionSubmit = (event) => {
         event.preventDefault();
-        setUserEmotion(userEmotion);
+        results(userEmotion);
     }
     return (
-        <form onSubmit={emotionSubmit} onChange={emotionChange}>
+        <form onSubmit={emotionSubmit} onChange={emotionChange} className="emotion-form">
             <h2>{userEmotion? userEmotion : "How are you feeling?"}</h2>
-            <input type="radio" id="Elated" name="moodSelect" value="elated" />
-            <label>Elated</label>
+            <label>Elated
+            <input type="radio" id="elated" name="moodSelect" value="elated" />
+            </label>
+            <label>Happy
             <input type="radio" id="happy" name="moodSelect" value="happy" />
-            <label>Happy</label>
+            </label>
+            <label>Meh
             <input type="radio" id="meh" name="moodSelect" value="meh" />
-            <label>Meh</label>
+            </label>
+            <label>Down
             <input type="radio" id="down" name="moodSelect" value="down" />
-            <label>Down</label>
-            <input type="radio" id="Terrible" name="moodSelect" value="terrible" />
-            <label>Terrible</label>
-            <button type="submit" value="Submit" />
+            </label>
+            <label>Terrible
+            <input type="radio" id="terrible" name="moodSelect" value="terrible" />
+            </label>
+            <button type="submit" value="Submit" className="submit-button" >Log My Mood</button>
         </form>
     )
 }

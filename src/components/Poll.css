@@ -1,0 +1,7 @@
+.emotion-form {
+    width: 400px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0,0,0, .9);
+}

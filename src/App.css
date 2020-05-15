@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #94b3da;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -25,14 +25,19 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #2463b3;
+  text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.submit-button {
+  background-color: #4d627d;
+  border-radius:3px;
+  border: none;
+  color: white;
+  padding: 5px 32px;
+  text-decoration: none;
+  margin: 4px 10px;
+  line-height: 30px;
+  cursor: pointer;
 }
+
