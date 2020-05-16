@@ -1,5 +1,9 @@
 .weather-wrapper {
-    max-width: 700px;
+    width: 400px;
     font-size: .7em;
     margin: 50px auto;
+    text-align: left;
+    background-color: rgb(77, 98, 125);
+    padding: 20px 50px 50px 50px;
+    border-radius: 10px;
 }
