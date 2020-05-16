@@ -9,6 +9,6 @@ export default function Mood({mood, weather, weatherLocation, temperature, windS
     const hours = d.getHours();
     const mins = d.getMinutes();
     return (
-    <tr><td>{String.prototype.concat(month, '/', day, '/', year, '  -- ', hours, ':', mins)}</td><td>{mood}</td><td>{weatherLocation}</td><td>{weather}</td><td>{temperature} {temperatureUnit}</td><td>{windSpeed} bearing {windDirection}</td></tr>
+    <tr><td>{String.prototype.concat(month, '/', day, '/', year, '  -- ', hours, ':', mins)}</td><td>{mood}</td><td>{weatherLocation}</td><td>{weather}</td><td>{temperature} {temperatureUnit}</td><td>{windSpeed} knots bearing {windDirection}</td></tr>
     )
 }

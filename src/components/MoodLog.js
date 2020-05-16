@@ -18,7 +18,7 @@ export default function MoodLog({weather, weatherLocation, temperature, windSpee
     return (
         <section>
             { pollVis? <Poll results={pollResults}/> : "" }
-            <span className="search-icon" onClick={()=>{setPollVis(true)}}><i className="fas fa-plus-circle" ></i>Track My Mood</span>
+            <span className="search-icon track-mood" onClick={()=>{setPollVis(true)}}><i className="fas fa-plus-circle" ></i>Track My Mood</span>
             <table>
                 <thead>
                     <tr>

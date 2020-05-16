@@ -1,7 +1,6 @@
 import React from 'react';
 import './Weather.css';
 import MoodLog from './MoodLog';
-import Mood from './Mood';
 
 export default function Weather({weather, weatherLocation, temperature, weatherIcon, windSpeed, windDirection, temperatureUnit}){
     

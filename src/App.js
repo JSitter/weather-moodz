@@ -2,11 +2,9 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import CitySearch from './components/CitySearch';
 import Weather from './components/Weather';
-import Poll from './components/Poll';
 import CurrentLocation from './components/CurrentLocation';
 
 function App() {
-  const moods = [];
   const [ geoAvail, setGeoAvail ] = useState(false);
   const [ latitude, setLatitude ] = useState(null);
   const [ longitude, setLongitude ] = useState(null);
@@ -32,10 +30,6 @@ function App() {
     }
   }, [geoAvail, latitude, longitude, weather]);
 
-  const setEmotion = (event) => {
-    console.log(event);
-  }
-
   const owAPIScraper = (json)=>{
     if( "weather" in json){
       setWeatherLocation(json.name);
@@ -47,18 +41,12 @@ function App() {
     }else {
       setWeather("Location Not Found")
     }
-
-
   }
 
   const getWeatherByLatLon = (lat, lon) => {
     fetch('http://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+lon+'&appid='+process.env.REACT_APP_API_KEY).then(response => {
       response.json().then(owAPIScraper);
     });
-  }
-
-  const owAPIText = (text) => {
-    console.log(text)
   }
 
   const getWeatherByCityState = (city, state) => {
